@@ -2,9 +2,120 @@
 <html lang="en">
 <head>
     <title>Profil</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(108, 160, 160);
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+        }
+        .konten-tengah {
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+            background-color: beige;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 32px;
+            color: black;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 24px;
+            color: black;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+        p, li {
+            font-size: 18px;
+            color: brown;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: rgb(11, 8, 77);
+        }
+        img {
+            width: 100px;
+            max-width: 200px;
+            height: auto;
+            border: 3px solid brown;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        a {
+            color: rgb(93, 72, 200);
+            text-decoration: none;
+        }
+        form {
+            margin-top: 20px;
+            padding: 20px;
+            border: 2px solid brown;
+            border-radius: 8px;
+            background-color: white;
+        }
+        label {
+            display: flexbox;
+            margin-top: 12px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"] {
+            width: 100px;
+            padding: 10px;
+            margin-top: 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        input {
+            margin-top: 20px;
+            padding: 30px 50px;
+            background-color: antiquewhite;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="sumbit"]:hover {
+            background-color: blue;
+        }
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: black;
+            font-size: 14px;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 26px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            p, li {
+                font-size: 16px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>My Biodata</h1>
+    <div class="konten-tengah">
+        <h1>My Biodata</h1>
     
     <h2>My Name</h2>
     <p>Aulia Oktavia</p>
@@ -20,12 +131,36 @@
 
     <h2>GitHub</h2>
     <p><a href="https://github.com/Viafink77" target="_blank">https://github.com/Viafink77</a></p>
+    <h2>Sosial Media</h2>
+    <ul>
+        <li><a href="https://instagram.com/aulianasa_official" target="_blank">Instagram</a></li>
+    </ul>
 
-    <h2>Hubungi Saya</h2>
-    <form>
-        <label>Nama: <input type="text" /></label><br />
-        <label>Email: <input type="email" /></label><br />
+    <h2>About Me</h2>
+    <p>Saya adalah seorang mahasiswi program studi Sistem Informasi di Fakultas Teknik Universitas Nahdlatul Ulama NTB</p>
+
+    <h2>My Skills</h2>
+    <ul>
+        <li>HTML & CSS</li>
+        <li>JavaScript Dasar</li>
+        <li>Python Dasar</li>
+    </ul>
+
+    </div>
+
+        <h2>Hubungi Saya</h2>
+    <form action="#" method="post">
+        <label>Nama: <input type="text" id="nama" name="nama" /></label><br />
+        <label>Email: <input type="email" id="email" name="email" /></label><br/>
+        <label for="pesan">Pesan</label><br/>
+        <textarea id="pesan" name="pesan" rows="4"></textarea><br/>
         <button type="submit">Kirim</button>
     </form>
+    <div>
+        <footer>
+            <p>&copy; 2025 Aulia Oktavia. Dibuat dengan HTML & CSS.</p>
+        </footer>
+    </div>
+    
 </body>
 </html>

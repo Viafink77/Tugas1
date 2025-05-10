@@ -1,166 +1,236 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profil</title>
     <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: rgb(108, 160, 160);
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 30px;
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        gap: 1rem;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #e0f2f1;
+        margin: 0;
+        padding: 20px;
+        flex-wrap: wrap;
+      }
+
+      .konten-tengah {
+        text-align: center;
+        max-width: 800px;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .box-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .box {
+        background-color: #fce4ec;
+        padding: 20px;
+        border: 2px solid #f06292;
+        border-radius: 8px;
+      }
+
+      .judul-utama {
+        font-size: 32px;
+        color: #333;
+        text-align: center;
+      }
+
+      .subjudul {
+        font-size: 24px;
+        color: #333;
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      .paragraf {
+        font-size: 18px;
+        color: #555;
+        text-align: center;
+      }
+
+      .gambar {
+        display: block;
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        border: 3px solid #f06292;
+        border-radius: 10px;
+        margin: 10px auto;
+      }
+
+      .tautan {
+        color: #0077cc;
+        text-decoration: none;
+      }
+
+      .tautan:hover {
+        text-decoration: underline;
+        color: #004d40;
+      }
+
+      .daftar {
+        list-style: none;
+        padding: 0;
+        display: inline-block;
+        text-align: left;
+        margin: 10px auto;
+        font-size: 18px;
+        color: #555;
+      }
+
+      .formulir {
+        margin-top: 30px;
+        padding: 20px;
+        border: 2px solid #4db6ac;
+        border-radius: 8px;
+        background-color: #e0f2f1;
+      }
+
+      .label {
+        display: block;
+        margin-top: 12px;
+        font-weight: bold;
+      }
+
+      .input-text,
+      .input-email,
+      .textarea {
+        width: 80%;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        font-size: 16px;
+      }
+
+      .btn-submit {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #f06292;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .btn-submit:hover {
+        background-color: #ec407a;
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          flex-direction: column;
         }
-        .konten-tengah {
-            text-align: center;
-            max-width: 800px;
-            margin: auto;
-            background-color: beige;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+        .box {
+          padding: 15px;
+          width: 100%;
         }
-        h1 {
-            font-size: 32px;
-            color: black;
-            margin-bottom: 20px;
+
+        .judul-utama {
+          font-size: 26px;
         }
-        h2 {
-            font-size: 24px;
-            color: black;
-            margin-top: 30px;
-            margin-bottom: 10px;
+
+        .subjudul {
+          font-size: 20px;
         }
-        p, li {
-            font-size: 18px;
-            color: brown;
+
+        .paragraf,
+        .daftar {
+          font-size: 16px;
         }
-        a:hover {
-            text-decoration: underline;
-            color: rgb(11, 8, 77);
-        }
-        img {
-            width: 100px;
-            max-width: 200px;
-            height: auto;
-            border: 3px solid brown;
-            border-radius: 10px;
-            margin-top: 10px;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        li {
-            margin-bottom: 5px;
-        }
-        a {
-            color: rgb(93, 72, 200);
-            text-decoration: none;
-        }
-        form {
-            margin-top: 20px;
-            padding: 20px;
-            border: 2px solid brown;
-            border-radius: 8px;
-            background-color: white;
-        }
-        label {
-            display: flexbox;
-            margin-top: 12px;
-            font-weight: bold;
-        }
-        input[type="text"],
-        input[type="email"] {
-            width: 100px;
-            padding: 10px;
-            margin-top: 6px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 16px;
-        }
-        input {
-            margin-top: 20px;
-            padding: 30px 50px;
-            background-color: antiquewhite;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        input[type="sumbit"]:hover {
-            background-color: blue;
-        }
-        footer {
-            margin-top: 40px;
-            text-align: center;
-            color: black;
-            font-size: 14px;
-        }
-        @media (max-width: 600px) {
-            body {
-                padding: 10px;
-            }
-            h1 {
-                font-size: 26px;
-            }
-            h2 {
-                font-size: 20px;
-            }
-            p, li {
-                font-size: 16px;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body class="container">
     <div class="konten-tengah">
-        <h1>My Biodata</h1>
-    
-    <h2>My Name</h2>
-    <p>Aulia Oktavia</p>
+      <h1 class="judul-utama">My Biodata</h1>
 
-    <h2>Foto Profil</h2>
-    <img src="image/me.jpg" alt="Foto" width="200">
+      <div class="box-container">
+        <!-- Box 1 -->
+        <div class="box">
+          <h2 class="subjudul">My Name</h2>
+          <p class="paragraf">Aulia Oktavia</p>
 
-    <h2>Contact</h2>
-    <ul>
-        <li>Telepon: 0819-3705-1924</li>
-        <li>Email: viaaulia97@gmail.com</li>
-    </ul>
+          <h2 class="subjudul">Foto Profil</h2>
+          <img src="image/me.jpg" alt="Foto Profil" class="gambar" />
+        </div>
 
-    <h2>GitHub</h2>
-    <p><a href="https://github.com/Viafink77" target="_blank">https://github.com/Viafink77</a></p>
-    <h2>Sosial Media</h2>
-    <ul>
-        <li><a href="https://instagram.com/aulianasa_official" target="_blank">Instagram</a></li>
-    </ul>
+        <!-- Box 2 -->
+        <div class="box">
+          <h2 class="subjudul">Contact</h2>
+          <ul class="daftar">
+            <li>Telepon: 0819-3705-1924</li>
+            <li>Email: viaaulia97@gmail.com</li>
+          </ul>
 
-    <h2>About Me</h2>
-    <p>Saya adalah seorang mahasiswi program studi Sistem Informasi di Fakultas Teknik Universitas Nahdlatul Ulama NTB</p>
+          <h2 class="subjudul">GitHub</h2>
+          <p class="paragraf">
+            <a
+              href="https://github.com/Viafink77"
+              target="_blank"
+              class="tautan"
+              >https://github.com/Viafink77</a
+            >
+          </p>
 
-    <h2>My Skills</h2>
-    <ul>
-        <li>HTML & CSS</li>
-        <li>JavaScript Dasar</li>
-        <li>Python Dasar</li>
-    </ul>
+          <h2 class="subjudul">Sosial Media</h2>
+          <ul class="daftar">
+            <li>
+              <a
+                href="https://instagram.com/aulianasa_official"
+                target="_blank"
+                class="tautan"
+                >Instagram</a
+              >
+            </li>
+          </ul>
+        </div>
 
+        <!-- Box 3 -->
+        <div class="box">
+          <h2 class="subjudul">About Me</h2>
+          <p class="paragraf">
+            Saya adalah seorang mahasiswi program studi Sistem Informasi di
+            Fakultas Teknik Universitas Nahdlatul Ulama NTB
+          </p>
+
+          <h2 class="subjudul">My Skills</h2>
+          <ul class="daftar">
+            <li>HTML & CSS</li>
+            <li>JavaScript Dasar</li>
+            <li>Python Dasar</li>
+          </ul>
+        </div>
+      </div>
     </div>
 
-        <h2>Hubungi Saya</h2>
-    <form action="#" method="post">
-        <label>Nama: <input type="text" id="nama" name="nama" /></label><br />
-        <label>Email: <input type="email" id="email" name="email" /></label><br/>
-        <label for="pesan">Pesan</label><br/>
-        <textarea id="pesan" name="pesan" rows="4"></textarea><br/>
-        <button type="submit">Kirim</button>
-    </form>
-    <div>
-        <footer>
-            <p>&copy; 2025 Aulia Oktavia. Dibuat dengan HTML & CSS.</p>
-        </footer>
+    <div class="konten-tengah">
+      <h2 class="subjudul">Hubungi Saya</h2>
+      <form class="formulir" action="#" method="post">
+        <label for="nama" class="label">Nama:</label>
+        <input type="text" id="nama" name="nama" class="input-text" />
+
+        <label for="email" class="label">Email:</label>
+        <input type="email" id="email" name="email" class="input-email" />
+
+        <label for="pesan" class="label">Pesan:</label>
+        <textarea id="pesan" name="pesan" rows="4" class="textarea"></textarea>
+
+        <button type="submit" class="btn-submit">Kirim</button>
+      </form>
     </div>
-    
-</body>
+  </body>
 </html>
